@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chocowhipped2"
+    tools:context="com.example.android.justjava.com.example.android.YourCoffee.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        >
+
+        <EditText
+            style="@style/CustomText"
+            android:layout_marginTop="16dp"
+            android:id="@+id/Name_view"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:hint="Name"
+            android:background="#FFFFFFFF"
+            android:inputType="textCapWords" />
+
+        <TextView
+            style="@style/CustomText"
+            android:id="@+id/toppings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="toppings"
+            android:layout_marginTop="16dp"
+            android:textAllCaps="true"
+            android:textSize="16sp" />
+
+        <CheckBox
+
+            android:id="@+id/WhippedCream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:background="#A1FFFFFF"
+            android:text="Whipped Cream"
+            android:textSize="16sp"
+            />
+
+        <CheckBox
+            android:layout_marginTop="16dp"
+
+            android:id="@+id/Chocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:background="#A1FFFFFF"
+            android:text="Chocolate"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:background="#BBA1887F"
+            style="@style/CustomText"
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="quantity"
+            android:textAllCaps="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:background="#FFFFFFFF"
+                android:id="@+id/decrement"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:onClick="decrement"
+                android:paddingBottom="20dp"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:paddingBottom="16dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="16dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Button
+                android:background="#FFFFFFFF"
+                android:id="@+id/increment"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/quantity"
+                android:onClick="increment"
+                android:paddingBottom="16dp"
+                android:text="+"
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:background="#BBA1887F"
+            style="@style/CustomText"
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/decrement"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:text="Order Summary"
+            android:textAllCaps="true"
+                        />
+        <TextView
+            android:id="@+id/order_summary_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price"
+            android:paddingBottom="16dp"
+            android:text="0" />
+
+        <Button
+            android:background="#FFFFFFFF"
+            android:id="@+id/order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_summary_text_view"
+            android:onClick="submitOrder"
+            android:text="order"
+
+            />
+
+     </LinearLayout>
+</ScrollView>
